@@ -22,6 +22,7 @@ public class ElasticSearchClientConfig {
 	public String ELASTIC_PROPERTIES = "/elasticSearch.properties";
 
 	private static final Logger log = Logger.getLogger(ElasticSearchClientConfig.class);
+	
 	private RestHighLevelClient restClient = null;
 
 	private Properties elasticProperties = null;
@@ -32,7 +33,7 @@ public class ElasticSearchClientConfig {
 			elasticProperties.load(ElasticSearchClientConfig.class.getResourceAsStream(ELASTIC_PROPERTIES));
 			log.info(elasticProperties.getProperty("host"));
 		} catch (IOException ex) {
-			log.info("Exception occurred while load elastic properties : " + ex, ex);
+			log.error("Erro ao executar chamada do ElasticSearch..", ex.getMessage(), ex);
 		}
 	}
 
