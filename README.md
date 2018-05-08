@@ -1,5 +1,7 @@
 # elasticApi
-Rest + ElasticSearch + WildFly
+Rest + ElasticSearch 6.2.2 + WildFly
 
 
-## Exemplo usando ElasticSearch 6.2.2 + JavaEE + Rest
+## Exemplo usando ElasticSearch 6.2.2 + Rest + Wildfly 10.x
+Obs:
+Adicionar as bibliotecas do Wildfly 10.x ao projeto.
